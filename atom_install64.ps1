@@ -17,7 +17,7 @@ Param(
     [string]$AtomDirectory=$(throw "AtomDirectory is mandatory, please provide a value.")
 )
 
-$Installer = "$PSScriptRoot\installer.exe"
+$Installer = "$PSScriptRoot\installer.sh"
 
 # Force TLS 1.2
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -26,7 +26,7 @@ $Installer = "$PSScriptRoot\installer.exe"
 $UserAgent = 'Boomi/AzureMarketplace'
 
 # Download the latest installer from platform
-Invoke-WebRequest -Uri 'https://platform.boomi.com/atom/atom_install64.exe' -UserAgent $UserAgent -OutFile $Installer
+Invoke-WebRequest -Uri 'https://platform.boomi.com/atom/atom_install64.sh' -UserAgent $UserAgent -OutFile $Installer
 
 # Create Args
 

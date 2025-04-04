@@ -232,7 +232,7 @@
             ]
           },
           "protectedSettings": {
-          "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File atom_install64.ps1 -BoomiAuthenticationType \"', parameters('BoomiAuthenticationType'), '\" -User \"', parameters('user'), '\" -Password \"', parameters('password'), '\" -installToken \"', parameters('BoomiMFAAPIToken'), '\" -AtomName \"', parameters('atomName'), '\" -AccountId \"', parameters('accountId'), '\" -AtomDirectory ', variables('directory'))]"
+          "commandToExecute": "[concat('pwsh -ExecutionPolicy Unrestricted -File atom_install64.ps1 -BoomiAuthenticationType \"', parameters('BoomiAuthenticationType'), '\" -User \"', parameters('user'), '\" -Password \"', parameters('password'), '\" -installToken \"', parameters('BoomiMFAAPIToken'), '\" -AtomName \"', parameters('atomName'), '\" -AccountId \"', parameters('accountId'), '\" -AtomDirectory ', variables('directory'))]"
           }
         }
       }
