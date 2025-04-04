@@ -87,7 +87,7 @@
       }
     },
     "variables": {
-      "safeAtomNameWithResourceGroupId": "[replace(replace(toLower(concat(parameters('atomName'), uniqueString(resourceGroup().id))), '-',''),'.','')]",
+      "safeAtomNameWithResourceGroupId": "[replace(replace(replace(toLower(concat(parameters('atomName'), uniqueString(resourceGroup().id))),' ',''),'-',''),'.','')]",
       "vmExtensionName": "BoomiAtom",
       "storageAccountType": "Premium_LRS",
       "virtualNetworkName": "[concat('vnet-', take(variables('safeAtomNameWithResourceGroupId'), 19))]",
