@@ -96,13 +96,12 @@
       "subnetPrefix": "192.168.255.0/24",
       "nicName": "[concat('nic-', take(variables('safeAtomNameWithResourceGroupId'), 20))]",
       "subnetref" : "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
-      "imagePublisher": "MicrosoftWindowsServer",
-      "imageOffer": "WindowsServer",
-      "imageSKU": "2012-R2-Datacenter",
+      "imagePublisher": "canonical",
+      "imageOffer": "ubuntu-24_04-lts",
+      "imageSKU": "server",
       "storageAccountName": "[take(variables('safeAtomNameWithResourceGroupId'), 24)]",
       "directory": "C:\\",
-      "nestedscriptUri": "[uri(parameters('baseUrl'), concat('atom_install64.ps1'))]"
-      
+      "nestedscriptUri": "[uri(parameters('baseUrl'), concat('atom_install64.ps1'))]"      
     },
     "resources": [
       {
